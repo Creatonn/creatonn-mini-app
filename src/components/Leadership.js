@@ -35,7 +35,7 @@ const Leadership = () => {
                     <span className="text-xl font-bold font-sans text-gray-700">10</span>
                 </div>
             </div>
-            <div className="flex flex-col gap-8">
+            <div className="flex flex-col gap-8 mb-[5rem]">
                 {leaders.map(leader => (
                     <div key={leader.id} className="flex items-center mb-4 p-4 bg-custom-light-beige border-2 border-black rounded-[5px] shadow-custom-bottom-right text-custom-dark-gray cursor-pointer text-[17px] font-bold hover:bg-custom-border focus:outline-none uppercase">
                         <img src={leader.imgSrc} alt={leader.username} className="w-12 h-12 rounded-full mr-4" />
