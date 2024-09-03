@@ -1,5 +1,6 @@
 import React from 'react';
 import Card from './Card';
+import ConnectWallet from './ConnectWallet';
 
 const Home = () => {
     const cards = [
@@ -10,21 +11,24 @@ const Home = () => {
     ];
 
     return (
-        <div className="flex flex-col items-center justify-center min-h-screen p-6 pb-32 -mt-4 ">
-            <div className="bg-custom-beige p-4 border-2 border-black rounded-lg shadow-custom-bottom-right w-full max-w-7xl mx-auto overflow-y-hidden">
-                <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
-                    {cards.map((card) => (
-                        <Card
-                            key={card.id}
-                            imgSrc={card.imgSrc}
-                            title={card.title}
-                            description={card.description}
-                            profileImgSrc={card.profileImgSrc}
-                        />
-                    ))}
+        <>
+            <ConnectWallet />
+            <div className="flex flex-col items-center justify-center min-h-screen p-6 pb-32 -mt-4 ">
+                <div className="bg-custom-beige p-4 border-2 border-black rounded-lg shadow-custom-bottom-right w-full max-w-7xl mx-auto overflow-y-hidden">
+                    <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+                        {cards.map((card) => (
+                            <Card
+                                key={card.id}
+                                imgSrc={card.imgSrc}
+                                title={card.title}
+                                description={card.description}
+                                profileImgSrc={card.profileImgSrc}
+                            />
+                        ))}
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     );
 };
 
