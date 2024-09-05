@@ -61,7 +61,7 @@ const Profile = () => {
 
             <div className="w-full flex flex-col items-start m-4 ">
                 <h1 className="text-xl font-bold font-sans text-gray-700">
-                    Expertise Gradient
+                    Level
                 </h1>
                 <div className="relative w-full mb-16 bg-custom-light-beige rounded-full p-4 shadow-custom-bottom-right mt-4">
                     <label htmlFor="labels-range-input" className="sr-only">

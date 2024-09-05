@@ -2,11 +2,6 @@ import React, { useState } from 'react';
 
 const Leadership = () => {
     const [activeTab, setActiveTab] = useState('Test1');
-    const sliderValue = 50;
-
-    const calculateBackgroundSize = () => {
-        return `${(sliderValue / 100) * 100}%`;
-    };
 
     const leadersTest1 = [
         { id: 1, imgSrc: '/images/leaderboard/user-profile.png', username: 'User1', coins: 150 },
@@ -40,7 +35,7 @@ const Leadership = () => {
                 Leadership Board
             </div>
 
-            <div className="flex justify-center items-center pt-4 pb-8 w-full gap-8">
+            <div className="flex justify-center items-center pt-4 w-full gap-8">
                 <div className="coin-section flex flex-col-reverse  items-center">
                     <span className='text-base font-sans font-semibold text-gray-500'>Total Users</span>
                     <span className="text-2xl font-bold font-sans text-gray-700">1500</span>
@@ -48,37 +43,6 @@ const Leadership = () => {
                 <div className="coin-section flex flex-col-reverse items-center">
                     <span className='text-base font-sans font-semibold text-gray-500'>Your rank </span>
                     <span className="text-2xl font-bold font-sans text-gray-700">1500</span>
-                </div>
-            </div>
-
-            <div className="w-full flex flex-col items-start">
-                <h1 className="text-xl font-bold font-sans text-gray-700">
-                    Expertise Gradient
-                </h1>
-                <div className="relative w-full mb-16 bg-custom-light-beige rounded-full p-4 shadow-custom-bottom-right mt-4">
-                    <label htmlFor="labels-range-input" className="sr-only">
-                        Labels range
-                    </label>
-                    <input
-                        id="labels-range-input"
-                        type="range"
-                        value={sliderValue}
-                        min="0"
-                        max="100"
-                        className="w-full h-4 bg-white rounded-lg appearance-none cursor-pointer custom-slider"
-                        style={{
-                            background: `linear-gradient(to right, #aad6f1 ${calculateBackgroundSize()}, white ${calculateBackgroundSize()})`,
-                        }}
-                    />
-                    <span className="text-lg text-gray-500 absolute left-0 -bottom-10">
-                        0
-                    </span>
-                    <span className="text-lg text-gray-500 absolute left-1/2 transform -translate-x-1/2 -bottom-10">
-                        {`${sliderValue}/100`}
-                    </span>
-                    <span className="text-lg text-gray-500 absolute right-0 -bottom-10">
-                        100
-                    </span>
                 </div>
             </div>
 

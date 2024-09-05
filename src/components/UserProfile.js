@@ -12,6 +12,12 @@ const UserProfile = () => {
         name: userTitle,
     };
 
+    const sliderValue = 50;
+
+    const calculateBackgroundSize = () => {
+        return `${(sliderValue / 100) * 100}%`;
+    };
+
     return (
         <div className="flex flex-col items-center p-6 min-h-screen">
             <div className="relative w-full mb-8">
@@ -46,6 +52,37 @@ const UserProfile = () => {
                         Rank &nbsp;:&nbsp;
                     </span>
                     <span className="text-2xl font-bold font-sans text-gray-700">10</span>
+                </div>
+            </div>
+
+            <div className="w-full flex flex-col items-start">
+                <h1 className="text-xl font-bold font-sans text-gray-700">
+                    Level
+                </h1>
+                <div className="relative w-full mb-16 bg-custom-light-beige rounded-full p-4 shadow-custom-bottom-right mt-4">
+                    <label htmlFor="labels-range-input" className="sr-only">
+                        Labels range
+                    </label>
+                    <input
+                        id="labels-range-input"
+                        type="range"
+                        value={sliderValue}
+                        min="0"
+                        max="100"
+                        className="w-full h-4 bg-white rounded-lg appearance-none cursor-pointer custom-slider"
+                        style={{
+                            background: `linear-gradient(to right, #aad6f1 ${calculateBackgroundSize()}, white ${calculateBackgroundSize()})`,
+                        }}
+                    />
+                    <span className="text-lg text-gray-500 absolute left-0 -bottom-10">
+                        0
+                    </span>
+                    <span className="text-lg text-gray-500 absolute left-1/2 transform -translate-x-1/2 -bottom-10">
+                        {`${sliderValue}/100`}
+                    </span>
+                    <span className="text-lg text-gray-500 absolute right-0 -bottom-10">
+                        100
+                    </span>
                 </div>
             </div>
 
