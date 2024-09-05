@@ -17,3 +17,36 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.custom-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  position: relative;
+  height: 14px;
+  cursor: pointer;
+  background-color: aqua;
+}
+
+.custom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background-color: #51768b;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.custom-slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: #51768b;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.custom-slider:focus {
+  outline: none;
+}
