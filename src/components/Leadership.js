@@ -4,17 +4,17 @@ const Leadership = () => {
     const [activeTab, setActiveTab] = useState('Test1');
 
     const leadersTest1 = [
-        { id: 1, imgSrc: '/images/leaderboard/user-profile.png', username: 'User1', coins: 150 },
-        { id: 2, imgSrc: '/images/leaderboard/user-profile.png', username: 'User2', coins: 120 },
-        { id: 3, imgSrc: '/images/leaderboard/user-profile.png', username: 'User3', coins: 100 },
-        { id: 4, imgSrc: '/images/leaderboard/user-profile.png', username: 'User4', coins: 100 },
+        { id: 1, imgSrc: '/images/leaderboard/user-profile.png', username: '@MusicFan', coins: 150 },
+        { id: 2, imgSrc: '/images/leaderboard/user-profile.png', username: '@TechSavvy', coins: 120 },
+        { id: 3, imgSrc: '/images/leaderboard/user-profile.png', username: '@FoodLvr23', coins: 100 },
+        { id: 4, imgSrc: '/images/leaderboard/user-profile.png', username: '@FitFam100', coins: 100 },
     ];
 
     const leadersTest2 = [
-        { id: 5, imgSrc: '/images/leaderboard/user-profile.png', username: 'User5', coins: 100 },
-        { id: 6, imgSrc: '/images/leaderboard/user-profile.png', username: 'User6', coins: 100 },
-        { id: 7, imgSrc: '/images/leaderboard/user-profile.png', username: 'User7', coins: 100 },
-        { id: 8, imgSrc: '/images/leaderboard/user-profile.png', username: 'User8', coins: 100 },
+        { id: 5, imgSrc: '/images/leaderboard/user-profile.png', username: '@BookwormB', coins: 100 },
+        { id: 6, imgSrc: '/images/leaderboard/user-profile.png', username: '@GameAddict', coins: 100 },
+        { id: 7, imgSrc: '/images/leaderboard/user-profile.png', username: '@NatureHkr', coins: 100 },
+        { id: 8, imgSrc: '/images/leaderboard/user-profile.png', username: '@CreativeMnd', coins: 100 },
     ];
 
     const leaders = activeTab === 'Test1' ? leadersTest1 : leadersTest2;
@@ -32,7 +32,7 @@ const Leadership = () => {
                 </div>
             </div>
             <div className="text-3xl font-bold pt-10 pb-6 text-left font-sans text-card-title">
-                Leadership Board
+                Leaderboard
             </div>
 
             <div className="flex justify-center items-center pt-4 w-full gap-8">
@@ -72,10 +72,10 @@ const Leadership = () => {
                     <div key={leader.id} className="flex items-center mb-4 p-4 bg-custom-light-beige border-2 border-black rounded-[5px] shadow-custom-bottom-right text-custom-dark-gray cursor-pointer text-[17px] font-bold hover:bg-custom-border focus:outline-none uppercase">
                         <img src={leader.imgSrc} alt={leader.username} className="w-12 h-12 rounded-full mr-4" />
                         <div className="flex flex-1 justify-between items-center">
-                            <span className="text-lg font-semibold font-sans text-gray-700">{leader.username}</span>
+                            <span className="text-base font-semibold font-sans text-gray-700">{leader.username}</span>
                             <div className="flex items-center">
-                                <span className='font-sans text-lg'>Points &nbsp;:&nbsp;</span>
-                                <span className="text-lg font-semibold font-sans text-gray-700">{leader.coins}</span>
+                                <span className='font-sans text-base'>Points &nbsp;:&nbsp;</span>
+                                <span className="text-base font-semibold font-sans text-gray-700">{leader.coins}</span>
                             </div>
                         </div>
                     </div>

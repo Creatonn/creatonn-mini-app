@@ -48,7 +48,7 @@ const Profile = () => {
             <div className=" w-full max-w-7xl mt-8">
                 <div className="flex flex-col items-center mb-4">
                     <h1 className="text-3xl font-bold font-sans text-card-title uppercase">
-                        name
+                        Dmitry
                     </h1>
                 </div>
                 <div className="flex flex-row justify-center items-center">
