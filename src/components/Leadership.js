@@ -69,13 +69,13 @@ const Leadership = () => {
 
             <div className="flex flex-col gap-8 mb-[5rem]">
                 {leaders.map(leader => (
-                    <div key={leader.id} className="flex items-center mb-4 p-4 bg-custom-light-beige border-2 border-black rounded-[5px] shadow-custom-bottom-right text-custom-dark-gray cursor-pointer text-[17px] font-bold hover:bg-custom-border focus:outline-none uppercase">
-                        <img src={leader.imgSrc} alt={leader.username} className="w-12 h-12 rounded-full mr-4" />
+                    <div key={leader.id} className="flex items-center mb-4 p-2 bg-custom-light-beige border-2 border-black rounded-[5px] shadow-custom-bottom-right text-custom-dark-gray cursor-pointer text-[17px] font-bold hover:bg-custom-border focus:outline-none uppercase">
+                        <img src={leader.imgSrc} alt={leader.username} className="w-12 h-12 rounded-full mr-2" />
                         <div className="flex flex-1 justify-between items-center">
-                            <span className="text-base font-semibold font-sans text-gray-700">{leader.username}</span>
+                            <span className="text-sm font-semibold font-sans text-gray-700">{leader.username}</span>
                             <div className="flex items-center">
-                                <span className='font-sans text-base'>Points &nbsp;:&nbsp;</span>
-                                <span className="text-base font-semibold font-sans text-gray-700">{leader.coins}</span>
+                                <span className='font-sans text-sm'>Points &nbsp;:&nbsp;</span>
+                                <span className="text-sm font-semibold font-sans text-gray-700">{leader.coins}</span>
                             </div>
                         </div>
                     </div>

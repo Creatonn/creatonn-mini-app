@@ -14,7 +14,7 @@ const Card = ({ imgSrc, title, description, profileImgSrc, token }) => {
             <div className="flex items-center justify-between w-full mt-4">
                 <img src={profileImgSrc} alt="Profile" className="w-14 h-14 rounded-full border-2 border-black shadow-custom-bottom-right" />
                 <button className="w-3/5 h-14 bg-custom-light-beige border-2 border-black rounded-[5px] shadow-custom-bottom-right text-custom-dark-gray cursor-pointer text-[17px] font-bold hover:bg-custom-border focus:outline-none uppercase">
-                    Buy ${token}
+                    Buy {token}
                 </button>
             </div>
         </div>
